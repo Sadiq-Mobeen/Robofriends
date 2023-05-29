@@ -3,8 +3,9 @@ import 'tachyons';
 
 import CardList from "../components/CardList";
 import SearchComponent from "../components/SearchComponent";
-import Scroll from '../components/Scroll.js'
-import './App.css'
+import Scroll from '../components/Scroll.js';
+import ErrorBoundary from '../components/ErrorBoundary';
+import './App.css';
 
 class App extends React.Component{
     constructor(){
@@ -36,7 +37,10 @@ class App extends React.Component{
                 </div>
                 <SearchComponent search = {this.onSearching} />
                 <Scroll>
-                    <CardList robots={searchedRobot}/>
+                    <ErrorBoundary>
+                        <CardList robots={searchedRobot}/>
+                    </ErrorBoundary>
+                    
                 </Scroll>
             </div>
         )
