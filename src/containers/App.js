@@ -32,6 +32,7 @@ class App extends React.Component{
         })
         return(
             <div className="tc">
+                
                 <div>
                     <h1>Robofriends</h1>
                 </div>
@@ -42,6 +43,9 @@ class App extends React.Component{
                     </ErrorBoundary>
                     
                 </Scroll>
+                <script>
+                    { document.title = "Robofriends" }
+                </script>
             </div>
         )
     }
