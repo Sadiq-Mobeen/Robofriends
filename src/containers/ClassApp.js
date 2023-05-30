@@ -5,9 +5,9 @@ import CardList from "../components/CardList";
 import SearchComponent from "../components/SearchComponent";
 import Scroll from '../components/Scroll.js';
 import ErrorBoundary from '../components/ErrorBoundary';
-import './App.css';
+import './ClassApp.css';
 
-class App extends React.Component{
+class ClassApp extends React.Component{
     constructor(){
         super()
         this.state = {
@@ -52,4 +52,4 @@ class App extends React.Component{
     }
 }
 
-export default App
+export default ClassApp
