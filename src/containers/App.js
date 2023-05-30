@@ -20,6 +20,10 @@ class App extends React.Component{
         this.setState( {searchBox: event.target.value } )
     }
 
+    changingTitle = (pageTitle) => {
+        document.title = pageTitle
+    }
+
     componentDidMount(){
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(res => res.json())
@@ -32,7 +36,7 @@ class App extends React.Component{
         })
         return(
             <div className="tc">
-                
+                { this.changingTitle('Robofriends') }
                 <div>
                     <h1>Robofriends</h1>
                 </div>
@@ -43,9 +47,6 @@ class App extends React.Component{
                     </ErrorBoundary>
                     
                 </Scroll>
-                <script>
-                    { document.title = "Robofriends" }
-                </script>
             </div>
         )
     }
