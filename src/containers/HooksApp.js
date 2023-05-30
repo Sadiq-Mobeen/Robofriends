@@ -15,7 +15,7 @@ export default function HooksApp(){
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(res => res.json())
         .then(users => setRobots(users))
-    })
+    }, [])
 
     const onSearching = (event) => {
         setSearchBox(event.target.value)
